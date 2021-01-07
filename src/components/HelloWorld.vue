@@ -18,7 +18,7 @@
     </div>    
 
     <div class="w-100 bg-white shadow rounded p-3">
-      <p>FirebaseApp</p>
+      <p>FirebaseApp .</p>
       <a-list bordered :data-source="data">
         <a-list-item :key="key" v-for="(contact, key) in contacts">
           <div class="w-100">
