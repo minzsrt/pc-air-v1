@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       locale,
-      collapsed: false
+      collapsed: true
     };
   },
   methods: {
