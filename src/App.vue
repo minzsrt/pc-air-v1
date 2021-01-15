@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app"   ref="document">
     <a-layout id="components-layout-demo-custom-trigger">
       <a-layout-sider v-model="collapsed" :trigger="null" collapsible>
         <div class="logo text-center d-flex">
@@ -40,7 +40,9 @@
         </a-layout-header>
         <a-layout-content :style="{ margin: '24px' }"
         >
+        	<button @click="exportToPDF">Export to PDF</button>
               <router-view></router-view>
+
         </a-layout-content>
       </a-layout>
     </a-layout>
@@ -49,7 +51,7 @@
 
 <script>
 import locale from 'ant-design-vue/es/date-picker/locale/th_TH';
-
+import html2pdf from 'html2pdf.js'
 export default {
   name: 'App',
   data() {
@@ -63,7 +65,17 @@ export default {
       // const ref = pathlink
       console.log('Hello '+pathlink+' !')
       // router.push({ path: `/overview` })
-    }
+    },
+    exportToPDF () {
+				html2pdf(this.$refs.document, {
+					margin: 0.2,
+					filename: 'document.pdf',
+					image: { type: 'jpeg', quality: 0.98 },
+					html2canvas: { dpi: 192, letterRendering: true },
+					jsPDF: { unit: 'cm', format: 'letter', orientation: 'portrait' }
+				})
+		}
+    
   }
   
 }
