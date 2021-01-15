@@ -11,18 +11,22 @@
         </div>
         <a-menu theme="dark" mode="inline" :default-selected-keys="['overview']">
           <a-menu-item key="overview">
-            <router-link :to="'overview'">
+            <router-link :to="'/'">
               <a-icon type="pie-chart" />
               <span>ภาพรวม</span>
             </router-link>
           </a-menu-item>
-          <a-menu-item key="2">
-                <a-icon type="pie-chart" />
-                <span>Overview</span>            
+          <a-menu-item key="orders">
+            <router-link :to="'orders'">
+                <a-icon type="audit" />
+                <span>ออเดอร์</span>            
+            </router-link>
           </a-menu-item>
-          <a-menu-item key="3">
-            <a-icon type="upload" />
-            <span>nav 3</span>
+          <a-menu-item key="customers">
+            <router-link :to="'customers'">
+                <a-icon type="user" />
+                <span>ลูกค้า</span>            
+            </router-link>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>

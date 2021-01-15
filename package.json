@@ -14,6 +14,8 @@
     "ant-design-vue": "^1.7.2",
     "each-async": "^1.1.1",
     "indent-string": "^4.0.0",
+    "pdfmake": "^0.1.69",
+    "pdfmake-font-generator": "^1.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
